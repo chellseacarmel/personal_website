@@ -1,0 +1,6 @@
+.apexcharts-tooltip-text-label {
+    max-width: 80px;
+    white-space: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
