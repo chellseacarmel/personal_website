@@ -25,7 +25,7 @@ const StyledAccount = styled('div')(({ theme }) => ({
   alignItems: 'center',
   padding: theme.spacing(2, 2.5),
   borderRadius: Number(theme.shape.borderRadius) * 1.5,
-  backgroundColor: alpha(theme.palette.grey[500], 0.12),
+  backgroundColor: alpha("#1890ff", 0.18),
 }));
 
 // ----------------------------------------------------------------------
@@ -56,9 +56,19 @@ export default function Nav({ openNav, onCloseNav }) {
         backgroundColor: "#FFFFFF"
       }}
     >
-      <Box sx={{ px: 3, py: 3, display: 'inline-flex'}}>
-      <img alt ="Welcome" src="/assets/illustrations/my_logo.png"/>
-      {/* <Typography variant="h4"  sx={{ color: '#410ff8' }}>Chellsea Robinson</Typography> */}
+      <Box sx={{ px: 3, py: 5, display: 'inline-flex'}}>
+      {/* <img alt ="Welcome" src="/assets/illustrations/my_logo.png"/> */}
+      <Typography variant="h2"  sx={{ color: "#23cfa4" }}>&#123;</Typography>
+      <Typography variant="h2"  sx={{ color: "#2065d1" }}>C</Typography>
+      <Typography variant="h2"  sx={{ color: '#2065d1' }}>h</Typography>
+      <Typography variant="h2"  sx={{ color: '#2065d1' }}>e</Typography>
+      <Typography variant="h2"  sx={{ color: '#2065d1' }}>l</Typography>
+      <Typography variant="h2"  sx={{ color: '#2065d1' }}>l</Typography>
+      <Typography variant="h2"  sx={{ color: '#2065d1' }}>s</Typography>
+      <Typography variant="h2"  sx={{ color: '#2065d1' }}>e</Typography>
+      <Typography variant="h2"  sx={{ color: '#2065d1' }}>a</Typography>
+       <Typography variant="h2"  sx={{ color: "#23cfa4" }}>&#125;</Typography>
+     
       </Box>
 
       <Box sx={{ mb: 5, mx: 2.5 }}>

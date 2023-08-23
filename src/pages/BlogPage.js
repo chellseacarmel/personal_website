@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 // @mui
-import { Grid, Button, Container, Stack, Typography, Card } from '@mui/material';
+import { Grid, Button, Container, Stack, Typography, Card, CardMedia } from '@mui/material';
 // components
 import Iconify from '../components/iconify';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
@@ -52,9 +52,9 @@ export default function BlogPage() {
             My Projects
           </Typography>
 
-          <a target="_blank" rel="noreferrer" href='https://github.com/chellseacarmel'>
+          <a target="_blank" rel="noreferrer" id="contact" href='https://github.com/chellseacarmel'>
           <Button variant="contained" startIcon={<Iconify icon="fluent-mdl2:open-in-new-tab" />}>
-            View Github
+            View GitHub
           </Button>
           </a>
 
@@ -63,9 +63,16 @@ export default function BlogPage() {
         <Grid container spacing={3}>
           {
               repos.map((repo,index)=>(
-                <Grid item background-color="#FFF" >
-                <a href={repo.repo_link}><img alt="Repo cards"src={repo.img_src}/></a>
-                </Grid>
+                // <Grid item background-color="#FFF" >
+                // <a href={repo.repo_link}><img alt="Repo cards"src={repo.img_src}/></a>
+                // </Grid>
+            <Grid item xs={4} sm={4} md={4} background-color="#FFF" >
+            <Card xs={4} sm={4} md={4}>
+            <a target="_blank" rel="noreferrer" href={repo.repo_link}>
+            <CardMedia sx={{ height: 165 }} image={repo.img_src} title="projects"/>
+            </a>
+            </Card>
+            </Grid>
               ))
           }
         </Grid>

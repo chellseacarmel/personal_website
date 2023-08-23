@@ -4,3 +4,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+#contact{
+  text-decoration: none; 
+}

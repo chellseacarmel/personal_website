@@ -33,7 +33,7 @@ export default function ProductsPage() {
             Resume
           </Typography>
 
-        <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/chellsea-carmel-robinson/'>
+        <a target="_blank" rel="noreferrer" id="contact" href='https://www.linkedin.com/in/chellsea-carmel-robinson/'>
           <Button variant="contained" startIcon={<Iconify icon="fluent-mdl2:open-in-new-tab" />}>
             View LinkedIn
           </Button>

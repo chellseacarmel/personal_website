@@ -3,6 +3,7 @@ import { NavLink as RouterLink } from 'react-router-dom';
 // @mui
 import { Box, List, ListItemText } from '@mui/material';
 //
+import { styled, alpha } from '@mui/material/styles';
 import { StyledNavItem, StyledNavItemIcon } from './styles';
 
 // ----------------------------------------------------------------------
@@ -39,7 +40,7 @@ function NavItem({ item }) {
       sx={{
         '&.active': {
           color: 'text.primary',
-          bgcolor: 'action.selected',
+          bgcolor: alpha("#1890ff", 0.18),
           fontWeight: 'fontWeightBold',
         },
       }}

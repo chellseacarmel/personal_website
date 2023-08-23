@@ -93,8 +93,8 @@ const palette = {
   },
   action: {
     active: GREY[600],
-    hover: alpha(GREY[300], 0.8),
-    selected: alpha(GREY[500], 0.16),
+    hover: alpha("#1890ff", 0.18),
+    selected: alpha("#1890ff", 0.08),
     disabled: alpha(GREY[500], 0.8),
     disabledBackground: alpha(GREY[500], 0.24),
     focus: alpha(GREY[500], 0.24),

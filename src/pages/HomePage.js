@@ -63,7 +63,7 @@ export default function HomePage() {
           <br/>
 
           <Box textAlign='center' alignItems='center' width="1100px" >
-          <a href = "mailto: ccrobinson@cs.stonybrook.edu">
+          <a href = "mailto: ccrobinson@cs.stonybrook.edu" id="contact" >
           <Button  size="large" variant="text" sx={{ textAlign: 'center', alignItems: 'center', borderRadius: "50px", width:"200px" }} >
             Contact Me 
           </Button>

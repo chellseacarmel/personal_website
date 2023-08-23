@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { faker } from '@faker-js/faker';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Grid, Container, Typography, Box, Stack,Button,IconButton, Card} from '@mui/material';
+import { Grid, Container, Typography, Box, Stack,Button,IconButton, Card, CardMedia} from '@mui/material';
 // components
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -23,6 +23,7 @@ import {
   AppWidgetSummary,
   AppCurrentSubject,
   AppConversionRates,
+  SimpleSlider,
 } from '../sections/@dashboard/app';
 
 import POSTS from '../_mock/blog';
@@ -30,6 +31,12 @@ import { BlogPostCard} from '../sections/@dashboard/blog';
 
 
 // ----------------------------------------------------------------------
+
+const styles = theme => ({
+  media: {          
+    height: 160, width: "100%", objectFit:'contain'
+  },
+});
 
 export default function DashboardAppPage() {
   const theme = useTheme();
@@ -74,7 +81,7 @@ export default function DashboardAppPage() {
 
   const handleRight = () => {
     console.log(left,right,repos.length)
-   if(right < 10 && (repos.length-1-left)>=2 ){
+   if(right < 10 && (repos.length-2-left)>=2 ){
     updateLeft(left+1)
     updateRight(right+1)
    }
@@ -111,9 +118,11 @@ export default function DashboardAppPage() {
         </Typography>
         </Box>
 
-        <Grid container spacing={2} >
+
+        <Grid container spacing={2} alignItems="center"
+  justifyContent="center" borderColor='#fff'>
         
-        <Grid item xs={6} sm={6} md={8} background-color="#FFF" wrap="nowrap" >
+        <Grid item xs={6} sm={6} md={8} background-color="#FFF" wrap="nowrap" sx={{ height: 180 }}>
         
        
         <Grid container spacing={0} alignContent={'center'} wrap="nowrap" >
@@ -122,19 +131,18 @@ export default function DashboardAppPage() {
         </IconButton>
 
 
-        <Grid container spacing ={3}>
+        <Grid container spacing ={2}>
          {
-          // POSTS.slice(left,right).map((post, index) => (
-          //   <BlogPostCard key={post.id} post={post} index={index} />
-          // ))
-          
           repos.slice(left,right).map((repo,index)=>(
             <Grid item xs={6} sm={6} md={6} background-color="#FFF" >
             <Card xs={6} sm={6} md={6}>
             {/* <div className="repo-card" width="161px" data-repo={repo.repo_name}/> */}
-            <div>
+            {/* <div>
             <a target="_blank" rel="noreferrer" href={repo.repo_link}><img  style={{objectFit:'cover'}} alt="Repo cards"src={repo.img_src}/></a>
-            </div>
+            </div> */}
+            <a target="_blank" rel="noreferrer" href={repo.repo_link}>
+            <CardMedia className={styles.media} sx={{ height: 160, width: "42vh", objectFit:'contain'}} image={repo.img_src} title="projects"/>
+            </a>
             </Card>
             </Grid>
           ))
@@ -146,18 +154,7 @@ export default function DashboardAppPage() {
           </IconButton>
         </Grid>
        
-        
-        {/* <Box>
-         
-          <IconButton aria-label="delete" onClick={handleLeft} >
-          <img width="30" height="30" src="https://img.icons8.com/stickers/100/back.png" alt="forward--v1"/>
-          </IconButton>
-  
-          <IconButton aria-label="delete" onClick={handleRight} >
-          <img width="30" height="30" src="https://img.icons8.com/stickers/100/forward--v1.png" alt="forward--v1"/>
-          </IconButton>
-          
-        </Box> */}
+      
         </Grid>
 
         <Grid item xs={4} md={4} lg={4}>
