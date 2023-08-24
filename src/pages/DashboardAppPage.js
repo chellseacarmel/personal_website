@@ -314,7 +314,7 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} sm={3} lg={4} >
+          <Grid item xs={12} md={6} lg={8} >
           <Stack spacing={2}>
           <Grid item xs={12} sm={3} lg={12}>
             <AppNewsUpdate
@@ -331,7 +331,7 @@ export default function DashboardAppPage() {
           
           </Grid>
 
-          <Grid item xs={12} sm={3} lg={12}>
+          <Grid item xs={12} md={6} lg={8}>
           <AppUpdate
               title="Awards"
               list={awards.slice(0,1).map((cert, index) => ({
