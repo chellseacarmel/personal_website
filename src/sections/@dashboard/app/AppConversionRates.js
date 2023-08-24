@@ -170,9 +170,10 @@ const seriesData = [{
 
   return (
     <Card {...other}>
-      <CardHeader title={"Programming languages"}/>
+      <CardHeader title={"Technologies and Frameworks"}/>
 
-      <Box sx={{ mx: 3 }} dir="ltr">
+
+      <Box sx={{ mx: 3}} dir="ltr">
         {/* <ReactApexChart type="bar"series={seriesData} options={chartOptions} height={135} /> */}
         <br/>
         <Grid container spacing={1}>
@@ -224,7 +225,6 @@ const seriesData = [{
         <Grid item>
         <Button variant="outlined" color="info" size="small">Matplotlib</Button>
         </Grid>
-        
        
         </Grid>
 

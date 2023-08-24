@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 import React from 'react'
 import Carousel from 'react-grid-carousel'
-import { alpha } from '@mui/material/styles';
 
 import { Box, Stack, Link, Card, Button, Divider, Typography, CardHeader } from '@mui/material';
 // utils
@@ -13,13 +12,13 @@ import Scrollbar from '../../../components/scrollbar';
 
 // ----------------------------------------------------------------------
 
-AppNewsUpdate.propTypes = {
+AppUpdate.propTypes = {
   title: PropTypes.string,
   subheader: PropTypes.string,
   list: PropTypes.array.isRequired,
 };
 
-export default function AppNewsUpdate({ title, subheader, list, ...other }) {
+export default function AppUpdate({ title, subheader, list, ...other }) {
 
   
   return (
@@ -27,17 +26,16 @@ export default function AppNewsUpdate({ title, subheader, list, ...other }) {
       <CardHeader title={title} subheader={subheader} />
       <Scrollbar>
 
-        <Stack spacing={2} sx={{ p: 2, pr: 0 }}> 
-        <Carousel cols={1} rows={3} gap={10} showDots hideArrow dotColorActive={alpha("#1890ff", 0.63)} loop autoplay={5000}breakpoint={800}>
+        <Stack spacing={2} sx={{ p: 3, pr: 0 }}> 
+      
           {list.map((news) => (
-            <Carousel.Item>
+           
             <NewsItem key={news.id} news={news} />
-            </Carousel.Item>
+           
           ))}
-          </Carousel>
+        
          </Stack> 
       </Scrollbar>
-      <br/>
 
       <Divider />
 

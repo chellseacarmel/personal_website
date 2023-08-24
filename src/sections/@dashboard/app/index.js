@@ -8,3 +8,5 @@ export { default as AppWidgetSummary } from './AppWidgetSummary';
 export { default as AppCurrentSubject } from './AppCurrentSubject';
 export { default as AppConversionRates } from './AppConversionRates';
 export { default as SimpleSlider } from './SimpleSlider';
+export { default as AppUpdate } from './AppUpdate';
+

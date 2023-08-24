@@ -24,7 +24,7 @@ export default function ProductsPage() {
   return (
     <>
       <Helmet>
-        <title> My Resume </title>
+        <title> Resume </title>
       </Helmet>
 
       <Container>

@@ -24,6 +24,7 @@ import {
   AppCurrentSubject,
   AppConversionRates,
   SimpleSlider,
+  AppUpdate
 } from '../sections/@dashboard/app';
 
 import POSTS from '../_mock/blog';
@@ -43,6 +44,13 @@ export default function DashboardAppPage() {
   const [left, updateLeft] = useState(0);
   const [right, updateRight] = useState(2);
 
+  
+  const awards =[{
+    description: "Awarded from Fall 2018 to Spring 2022",
+    image: "/assets/images/covers/sbu_logo.jpg",
+    title: "Stony Brook University Dean's List ",
+  }]
+
   const repos = [{
     repo_link: "https://github.com/chellseacarmel/Protest-Data-Dashboard",
     img_src: "https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg"
@@ -60,16 +68,21 @@ export default function DashboardAppPage() {
     img_src: "https://gh-card.dev/repos/chellseacarmel/Logo-Maker-Website.svg"
   },
   {
-    repo_link: "https://github.com/AhyoungOh/CSE416_QuizHub",
-    img_src: "https://gh-card.dev/repos/AhyoungOh/CSE416_QuizHub.svg"
-  }
-  ]
+    repo_link: "https://github.com/chellseacarmel/QuizHub",
+    img_src: "https://gh-card.dev/repos/chellseacarmel/QuizHub.svg"
+  },
+{
+  repo_link: "https://github.com/chellseacarmel/Multi-threaded-Chat-Server",
+  img_src: "https://gh-card.dev/repos/chellseacarmel/Multi-threaded-Chat-Server.svg"
+}
+,
+{
+  repo_link: "https://github.com/chellseacarmel/Flight-Routes-Database",
+  img_src: "https://gh-card.dev/repos/chellseacarmel/Flight-Routes-Database.svg"
+}
+,
+]
 
-  const awards =[{
-    description: "Awarded from Fall 2018 to Spring 2022",
-    image: "/assets/images/covers/sbu_logo.jpg",
-    title: "Stony Brook University Dean's List ",
-  }]
 
   const handleLeft = () => {
     console.log(left,right)
@@ -81,31 +94,55 @@ export default function DashboardAppPage() {
 
   const handleRight = () => {
     console.log(left,right,repos.length)
-   if(right < 10 && (repos.length-2-left)>=2 ){
+   if(right < 10 && (repos.length-1-left)>=2 ){
     updateLeft(left+1)
     updateRight(right+1)
    }
   };
 
   const certs = [{
-    description: "JPMC",
+    description: "JP Morgan and Chase",
     image: "/assets/images/covers/jpmorgan-chase.png",
-    title: "JPMC Virtual Experience ",
+    title: "Software Engineering Virtual Experience ",
+    link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/JPMorgan+Chase_completion_certificate.pdf"
   },
   {description: "Google",
   image: "/assets/images/covers/google-logo.png",
-  title: "Google Project Management",
+  title: "Foundations of Project Management",
+  link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/google_project_mangement.pdf"
 },
 {description: "IBM",
   image: "/assets/images/covers/ibm-logo.png",
-  title: "IBM Data Science Certificate",
+  title: "Introduction to Data Science",
+  link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/ibm_data_science.pdf"
 },
+{description: "IBM",
+  image: "/assets/images/covers/ibm-logo.png",
+  title: "Tools for Data Science",
+  link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/ibm_data_tools.pdf"
+},
+{description: "IBM",
+  image: "/assets/images/covers/ibm-logo.png",
+  title: "Methodologies for Data Science",
+  link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/ibm_data_methodology.pdf"
+},
+{description: "IBM",
+  image: "/assets/images/covers/ibm-logo.png",
+  title: "Python for AI, Data Science and Development",
+  link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/ibm_python_for_data.pdf"
+},
+{description: "Udemy",
+  image: "/assets/images/covers/udemy.png",
+  title: "Hands On Tableau Training for Data Science",
+  link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/Tableau+certificate.pdf"
+},
+
 ]
   
   return (
     <>
       <Helmet>
-        <title> Dashboard </title>
+        <title> Chellsea's Dashboard </title>
       </Helmet>
 
       <Container maxWidth="xl">
@@ -114,18 +151,20 @@ export default function DashboardAppPage() {
           Chellsea Robinson's Dashboard
         </Typography>
         <Typography variant="body1" sx={{ mb: 3 }}>
-          Curious / Passionate / Problem Solver
+          Curious / Adaptable / Problem Solver
         </Typography>
         </Box>
 
 
-        <Grid container spacing={2} alignItems="center"
-  justifyContent="center" borderColor='#fff'>
+        <Grid container spacing={2} alignItems="center" justifyContent="center" borderColor='#fff'>
         
-        <Grid item xs={6} sm={6} md={8} background-color="#FFF" wrap="nowrap" sx={{ height: 180 }}>
-        
-       
-        <Grid container spacing={0} alignContent={'center'} wrap="nowrap" >
+        <Grid item xs={8} sm={8} md={8} background-color="#FFF">
+{/*       
+        <Box>
+        <SimpleSlider/>
+        </Box> */}
+
+<Grid container spacing={0} alignContent={'center'} wrap="nowrap" >
         <IconButton aria-label="delete" onClick={handleLeft}  sx={ { borderRadius: 100}}>
           <img width="30" height="30" src="https://img.icons8.com/stickers/100/back.png"  alt="forward--v1"/>
         </IconButton>
@@ -280,18 +319,20 @@ export default function DashboardAppPage() {
           <Grid item xs={12} sm={3} lg={12}>
             <AppNewsUpdate
               title="Certificates"
-              list={certs.slice(0,3).map((cert, index) => ({
+              list={certs.map((cert, index) => ({
                 id: faker.datatype.uuid(),
                 title: cert.title,
                 description: cert.description,
                 image: cert.image,
+                link: cert.link
                 // postedAt: faker.date.recent(),
               }))}
             />
+          
           </Grid>
 
           <Grid item xs={12} sm={3} lg={12}>
-          <AppNewsUpdate
+          <AppUpdate
               title="Awards"
               list={awards.slice(0,1).map((cert, index) => ({
                 id: faker.datatype.uuid(),

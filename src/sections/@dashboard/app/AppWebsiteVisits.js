@@ -133,7 +133,7 @@ export default function AppWebsiteVisits({ title, subheader, chartLabels, chartD
 // ]
 
 const seriesData = [{
-  name: "Bachelors",
+  name: "Undergraduate",
   data: [1,1,0,1,1,0,1,1,0,1,1,0,0,
     0,0,
     ],
@@ -146,7 +146,7 @@ const seriesData = [{
     ],
   description: "Interned as a Junior Data Scientist Intern at Akai Kaeru and gained hands on experience in Data Analytics and Machine Learning "
 },
- {name: "Masters",
+ {name: "Graduate",
   data: [0,0,0,0,0,0,0,0,0,0,0,0,1,
     1,0,
     ],
@@ -154,7 +154,7 @@ const seriesData = [{
 },
 
 {
-  name: "TA",
+  name: "TAship",
   data: [0,0,0,0,0,0,1,0,0,0,1,0,0,
     0,0,
     ],
@@ -180,7 +180,7 @@ const seriesData = [{
   data: [0,0,0,0,0,0,0,0,1,0,0,0,0,
     0,1,
     ],
-  description: "Completed online coursework from Coursera with certficates from companies such as Google, IBM, etc."
+  description: "Completed online coursework from Coursera and Udemy with certficates from companies such as Google, IBM, etc."
 
 },
 
@@ -235,8 +235,8 @@ const seriesData = [{
   //   '01/22','02/22','03/22','04/22','05/22','06/22','07/22','08/22','09/22','10/22','11/22','12/22',
   //   '01/23','02/23','03/23','04/23','05/23','06/23','07/23','08/23','09/23','10/23','11/23','12/23',
   // ]
-      categories: ['Fall2018','Spring2019','Summer2019', 'Fall2019','Spring2020','Summer2020','Fall2020','Spring2021','Summer2021',
-      'Fall2021','Spring2022','Summer2022','Fall2022','Spring2023','Summer2023']
+      categories: ["Fall 2018",'Spring 2019','Summer 2019', 'Fall 2019','Spring 2020','Summer 2020','Fall 2020','Spring 2021','Summer 2021',
+      'Fall 2021','Spring 2022','Summer 2022','Fall 2022','Spring 2023','Summer 2023']
     },
     chart: {
       stacked: true,
@@ -246,7 +246,7 @@ const seriesData = [{
 
   return (
     <Card {...other}>
-      <CardHeader title={"Timeline"}/>
+      <CardHeader title={"Career Timeline"}/>
 
       <Box sx={{ mx: 3 }} dir="ltr">
         <ReactApexChart type="bar" series={seriesData} options={chartOptions} height={380} />

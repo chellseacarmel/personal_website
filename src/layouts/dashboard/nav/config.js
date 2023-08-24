@@ -20,12 +20,12 @@ const navConfig = [
   },
   {
     title: 'Projects',
-    path: '/dashboard/blog',
+    path: '/dashboard/projects',
     icon: <img width="30" height="30" src="https://img.icons8.com/stickers/100/squared-menu.png" alt="squared-menu"/>,
   },
   {
     title: 'Resume',
-    path: '/dashboard/products',
+    path: '/dashboard/resume',
     icon: <img width="30" height="30" src="https://img.icons8.com/stickers/100/parse-from-clipboard.png" alt="parse-from-clipboard"/>,
   },
   {

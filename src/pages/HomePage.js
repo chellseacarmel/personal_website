@@ -9,7 +9,7 @@ import Searchbar from '../layouts/dashboard/header/Searchbar';
 
 const HEADER_MOBILE = 64;
 
-const HEADER_DESKTOP = 70;
+const HEADER_DESKTOP = 50;
 
 const StyledContent = styled('div')(({ theme }) => ({
   maxWidth: 1110,
@@ -36,18 +36,18 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title> Home Page</title>
+        <title> Chellsea Robinson's Website</title>
       </Helmet>
       <StyledToolbar/>
 
       <Container sx={{ textAlign: 'left', alignItems: 'left' }}>
         <StyledContent sx={{ textAlign: 'left', alignItems: 'left' }}> 
-          <Typography variant="h1" title sx={{ textAlign: 'center', alignItems: 'center' }}>
+          <Typography variant="h2" title sx={{ textAlign: 'center', alignItems: 'center' }}>
             Hi, &#128075; my name is Chellsea.
           </Typography>
 
-          <Typography variant="h2" title sx={{ textAlign: 'center', alignItems: 'center' , color: "#2064d1"}}>
-            A Software Engineer with a Passion for Data.
+          <Typography variant="h3" title sx={{ textAlign: 'center', alignItems: 'center' , color: "#2064d1"}}>
+          A Graduate Student with a Passion for Software and Data.
           </Typography>
 
           <br/>
@@ -55,7 +55,7 @@ export default function HomePage() {
           <br/>
 
           <Box textAlign='center' alignItems='center' width="1100px"  >
-          <Button to="/" size="large" variant="contained" component={RouterLink} sx={{ textAlign: 'center', alignItems: 'center', borderRadius: "50px", width:"250px" }} >
+          <Button to="/dashboard/app" size="large" variant="contained" component={RouterLink} sx={{ textAlign: 'center', alignItems: 'center', borderRadius: "50px", width:"200px" }} >
             Portfolio Dashboard
           </Button>
           </Box>

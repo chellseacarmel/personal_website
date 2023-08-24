@@ -1,48 +1,110 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React from 'react'
+import Carousel from 'react-grid-carousel'
+import { Grid, Container, Typography, Box, Stack,Button,IconButton, Card, CardMedia} from '@mui/material';
 
-export default class SimpleSlider {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3
-    };
-    return (
-      <div>
-        <h2> Multiple items </h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-          <div>
-            <h3>9</h3>
-          </div>
-        </Slider>
-      </div>
-    );
+const repos = [{
+    repo_link: "https://github.com/chellseacarmel/Protest-Data-Dashboard",
+    img_src: "https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg"
+  },
+  {
+    repo_link: "https://github.com/chellseacarmel/Movie-Data-Dashboard",
+    img_src: "https://gh-card.dev/repos/chellseacarmel/Movie-Data-Dashboard.svg"
+  },
+  {
+    repo_link: "https://github.com/chellseacarmel/Airbnb-Price-Prediction",
+    img_src: "https://gh-card.dev/repos/chellseacarmel/Airbnb-Price-Prediction.svg"
+  },
+  {
+    repo_link: "https://github.com/chellseacarmel/Logo-Maker-Website",
+    img_src: "https://gh-card.dev/repos/chellseacarmel/Logo-Maker-Website.svg"
+  },
+  {
+    repo_link: "https://github.com/AhyoungOh/CSE416_QuizHub",
+    img_src: "https://gh-card.dev/repos/AhyoungOh/CSE416_QuizHub.svg"
   }
+  ]
+
+
+export default function SimpleSlider () {
+  return (
+    <Carousel cols={1} rows={3} gap={10} showDots   hideArrow autoplay={1} loop breakpoint={800}>
+      <Carousel.Item>
+        <Card>
+        <a>
+        <img width="100%"  src="https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg" alt="project"/>
+        </a>
+        </Card>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Card>
+        <a>
+        <img width="100%"  src="https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg" alt="project"/>
+        </a>
+        </Card>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Card>
+        <a>
+        <img width="100%"  src="https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg" alt="project"/>
+        </a>
+        </Card>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Card>
+        <a>
+        <img width="100%"  src="https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg" alt="project"/>
+        </a>
+        </Card>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Card>
+        <a>
+        <img width="100%"  src="https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg" alt="project"/>
+        </a>
+        </Card>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Card>
+        <a>
+        <img width="100%"  src="https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg" alt="project"/>
+        </a>
+        </Card>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Card>
+        <a>
+        <img width="100%"  src="https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg" alt="project"/>
+        </a>
+        </Card>
+      </Carousel.Item>
+    </Carousel>
+  )
 }
+
+// import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+// import '@brainhubeu/react-carousel/lib/style.css';
+
+// export default function SimpleSlider () {
+//   return (
+//     <Carousel
+//     plugins={[
+    
+//     'infinite',
+//     'arrows',
+//     {
+//       resolve: slidesToShowPlugin,
+//       options: {
+//        numberOfSlides: 2,
+//       },
+//     },
+//   ]}   
+// >
+//   <img src={"https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg"} height="170px" alt="projects" />
+//   <img src={"https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg"} height="200px" alt="projects" />
+//   <img src={"https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg"} height="200px" alt="projects" />
+// </Carousel>
+//   )
+// }
+
+
+

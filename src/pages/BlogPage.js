@@ -32,9 +32,22 @@ const repos = [{
   img_src: "https://gh-card.dev/repos/chellseacarmel/Logo-Maker-Website.svg"
 },
 {
-  repo_link: "https://github.com/AhyoungOh/CSE416_QuizHub",
-  img_src: "https://gh-card.dev/repos/AhyoungOh/CSE416_QuizHub.svg"
+  repo_link: "https://github.com/chellseacarmel/QuizHub",
+  img_src: "https://gh-card.dev/repos/chellseacarmel/QuizHub.svg"
 }
+
+,
+{
+  repo_link: "https://github.com/chellseacarmel/Multi-threaded-Chat-Server",
+  img_src: "https://gh-card.dev/repos/chellseacarmel/Multi-threaded-Chat-Server.svg"
+}
+,
+{
+  repo_link: "https://github.com/chellseacarmel/Flight-Routes-Database",
+  img_src: "https://gh-card.dev/repos/chellseacarmel/Flight-Routes-Database.svg"
+}
+,
+
 ]
 
 // ----------------------------------------------------------------------
@@ -43,13 +56,13 @@ export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <title> My Projects </title>
+        <title> Projects </title>
       </Helmet>
 
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h3" gutterBottom>
-            My Projects
+            Projects
           </Typography>
 
           <a target="_blank" rel="noreferrer" id="contact" href='https://github.com/chellseacarmel'>
