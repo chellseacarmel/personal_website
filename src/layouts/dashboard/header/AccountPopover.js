@@ -17,12 +17,12 @@ const MENU_OPTIONS = [
   {
     label: 'Projects',
     icon: 'eva:person-fill',
-    link: '/dashboard/projects'
+    link: '/dashboard/blog'
   },
   {
     label: 'Resume',
     icon: 'eva:settings-2-fill',
-    link: '/dashboard/resume'
+    link: '/dashboard/products'
   },
   {
     label: 'Contact',
