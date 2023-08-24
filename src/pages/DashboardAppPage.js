@@ -180,7 +180,7 @@ export default function DashboardAppPage() {
             <a target="_blank" rel="noreferrer" href={repo.repo_link}><img  style={{objectFit:'cover'}} alt="Repo cards"src={repo.img_src}/></a>
             </div> */}
             <a target="_blank" rel="noreferrer" href={repo.repo_link}>
-            <CardMedia className={styles.media} sx={{ height: 160, width: "42vh", objectFit:'contain'}} image={repo.img_src} title="projects"/>
+            <CardMedia className={styles.media} sx={{ height: 160, objectFit:'contain'}} image={repo.img_src} title="projects"/>
             </a>
             </Card>
             </Grid>
