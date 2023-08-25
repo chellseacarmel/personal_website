@@ -54,7 +54,7 @@ export default function HomePage() {
           <br/>
           <br/>
 
-          <Box textAlign='center' alignItems='center' width="1100px"  >
+          <Box textAlign='center' alignItems='center'>
           <Button to="/dashboard/app" size="large" variant="contained" component={RouterLink} sx={{ textAlign: 'center', alignItems: 'center', borderRadius: "50px", width:"200px" }} >
             Portfolio Dashboard
           </Button>
@@ -62,7 +62,7 @@ export default function HomePage() {
 
           <br/>
 
-          <Box textAlign='center' alignItems='center' width="1100px" >
+          <Box textAlign='center' alignItems='center'>
           <a href = "mailto: ccrobinson@cs.stonybrook.edu" id="contact" >
           <Button  size="large" variant="text" sx={{ textAlign: 'center', alignItems: 'center', borderRadius: "50px", width:"200px" }} >
             Contact Me 
