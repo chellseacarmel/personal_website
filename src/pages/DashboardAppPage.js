@@ -180,7 +180,7 @@ export default function DashboardAppPage() {
 
         <Grid container spacing={2} alignItems="center" justifyContent="center" borderColor='#fff'>
         
-        <Grid item xs={8} sm={8} md={8} background-color="#FFF">
+        <Grid item xs={12} sm={12} md={8} background-color="#FFF">
 {/*       
         <Box>
         <SimpleSlider/>
@@ -336,9 +336,9 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} sm={3} lg={4} >
-          <Stack spacing={2}>
-          <Grid item xs={12} sm={3} lg={12}>
+          {/* <Grid item xs={12} sm={12} md={12} lg={4} >
+          <Stack spacing={2}> */}
+          <Grid item xs={12} sm={6} md={12} lg={12}>
             <AppNewsUpdate
               title="Certificates"
               list={certs.map((cert, index) => ({
@@ -353,7 +353,7 @@ export default function DashboardAppPage() {
           
           </Grid>
 
-          <Grid item xs={12} sm={3} lg={12}>
+          <Grid item xs={12} sm={6} lg={12}>
           <AppUpdate
               title="Awards"
               list={awards.slice(0,1).map((cert, index) => ({
@@ -367,8 +367,8 @@ export default function DashboardAppPage() {
            
           </Grid>
     
-          </Stack>
-          </Grid>
+          {/* </Stack>
+          </Grid> */}
 
         </Grid>
       </Container>
