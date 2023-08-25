@@ -218,7 +218,7 @@ export default function DashboardAppPage() {
       
         </Grid>
 
-        <Grid item xs={4} md={4} lg={4}>
+        <Grid item xs={12} md={4} lg={4}>
             <AppConversionRates
               title="Conversion Rates"
               subheader="(+43%) than last year"
@@ -296,7 +296,7 @@ export default function DashboardAppPage() {
         </Grid>
            */}
 
-          <Grid item xs={8} md={6} lg={8}>
+          <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
               title="Website Visits"
               subheader="(+43%) than last year"
