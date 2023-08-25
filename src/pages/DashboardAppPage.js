@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { faker } from '@faker-js/faker';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Grid, Container, Typography, Box, Stack,Button,IconButton, Card, CardMedia} from '@mui/material';
+import { Grid, Container, Typography, Box, Stack,Button,IconButton, Card, CardMedia,useMediaQuery} from '@mui/material';
 // components
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -41,8 +41,12 @@ const styles = theme => ({
 
 export default function DashboardAppPage() {
   const theme = useTheme();
+  const greaterThanMid = useMediaQuery(theme.breakpoints.up("md"));
+  const smallToMid = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  const lessThanSmall = useMediaQuery(theme.breakpoints.down("sm"));
+
   const [left, updateLeft] = useState(0);
-  const [right, updateRight] = useState(2);
+  const [right, updateRight] = useState(lessThanSmall ? 1: 2);
 
   
   const awards =[{
@@ -86,18 +90,36 @@ export default function DashboardAppPage() {
 
   const handleLeft = () => {
     console.log(left,right)
-   if(left > 0 && (right - left)===2 ){
-    updateLeft(left-1)
-    updateRight(right-1)
-   }
+   
+    if (lessThanSmall){
+      if(left > 0 && (right - left)===1 ){
+        updateLeft(left-1)
+        updateRight(right-1)
+       }
+
+    }
+    else if(smallToMid || greaterThanMid){
+      if(left > 0 && (right - left)=== 2 ){
+        updateLeft(left-1)
+        updateRight(right-1)
+    }
+  }
   };
 
   const handleRight = () => {
     console.log(left,right,repos.length)
-   if(right < 10 && (repos.length-1-left)>=2 ){
-    updateLeft(left+1)
-    updateRight(right+1)
-   }
+    if(lessThanSmall){
+      if(right < 10 && (repos.length-1-left)>=1 ){
+        updateLeft(left+1)
+        updateRight(right+1)
+       }
+     }
+     else if(smallToMid || greaterThanMid){
+      if (right < 10 && (repos.length-1-left)>=2) {
+        updateLeft(left+1)
+        updateRight(right+1)
+     }
+    }
   };
 
   const certs = [{
@@ -173,8 +195,8 @@ export default function DashboardAppPage() {
         <Grid container spacing ={2}>
          {
           repos.slice(left,right).map((repo,index)=>(
-            <Grid item xs={6} sm={6} md={6} background-color="#FFF" >
-            <Card xs={6} sm={6} md={6}>
+            <Grid item xs={12} sm={6} md={6} background-color="#FFF" >
+            <Card xs={12} sm={6} md={6}>
             {/* <div className="repo-card" width="161px" data-repo={repo.repo_name}/> */}
             {/* <div>
             <a target="_blank" rel="noreferrer" href={repo.repo_link}><img  style={{objectFit:'cover'}} alt="Repo cards"src={repo.img_src}/></a>

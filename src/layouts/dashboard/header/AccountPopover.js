@@ -15,6 +15,11 @@ const MENU_OPTIONS = [
     link: '/home'
   },
   {
+    label: 'Dashboard',
+    icon: 'eva:person-fill',
+    link: '/dashboard/app'
+  },
+  {
     label: 'Projects',
     icon: 'eva:person-fill',
     link: '/dashboard/projects'
