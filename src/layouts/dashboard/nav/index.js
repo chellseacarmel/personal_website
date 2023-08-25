@@ -38,13 +38,12 @@ Nav.propTypes = {
 export default function Nav({ openNav, onCloseNav }) {
   const { pathname } = useLocation();
 
-  const isDesktop = !openNav;
-  // useResponsive('up', 'lg');
+  const isDesktop = useResponsive('up', 'lg');
 
   useEffect(() => {
-    // if (openNav) {
-    //   // onCloseNav();
-    // }
+    if (openNav) {
+      onCloseNav();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname,openNav]);
 
