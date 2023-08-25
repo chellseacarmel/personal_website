@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 // @mui
-import { Grid, Button, Container, Stack, Typography, Card, CardMedia } from '@mui/material';
+import { Grid, Button, Container, Stack, Typography, Card, CardMedia, useMediaQuery } from '@mui/material';
 // components
+import { useTheme } from '@mui/material/styles';
 import Iconify from '../components/iconify';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
 // mock
@@ -53,6 +54,15 @@ const repos = [{
 // ----------------------------------------------------------------------
 
 export default function BlogPage() {
+
+  const theme = useTheme();
+  const greaterThanMid = useMediaQuery(theme.breakpoints.up("md"));
+  const smallToMid = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  const lessThanSmall = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const height = lessThanSmall? 200: 150
+
+
   return (
     <>
       <Helmet>
@@ -79,10 +89,10 @@ export default function BlogPage() {
                 // <Grid item background-color="#FFF" >
                 // <a href={repo.repo_link}><img alt="Repo cards"src={repo.img_src}/></a>
                 // </Grid>
-            <Grid item xs={4} sm={4} md={4} background-color="#FFF" >
-            <Card xs={4} sm={4} md={4}>
+            <Grid item xs={12} sm={6} md={4} background-color="#FFF" >
+            <Card xs={12} sm={6} md={4}>
             <a target="_blank" rel="noreferrer" href={repo.repo_link}>
-            <CardMedia sx={{ height: 165 }} image={repo.img_src} title="projects"/>
+            <CardMedia sx={{ height: {height} }} image={repo.img_src} title="projects"/>
             </a>
             </Card>
             </Grid>
