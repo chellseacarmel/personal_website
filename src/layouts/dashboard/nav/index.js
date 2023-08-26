@@ -18,7 +18,7 @@ import navConfig from './config';
 
 // ----------------------------------------------------------------------
 
-const NAV_WIDTH = 280;
+const NAV_WIDTH = 260;
 
 const StyledAccount = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -45,7 +45,7 @@ export default function Nav({ openNav, onCloseNav }) {
       onCloseNav();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname,openNav]);
+  }, [pathname]);
 
   const renderContent = (
     <Scrollbar
@@ -55,7 +55,7 @@ export default function Nav({ openNav, onCloseNav }) {
         backgroundColor: "#FFFFFF"
       }}
     >
-      <Box sx={{ px: 3, py: 5, display: 'inline-flex'}}>
+      <Box sx={{ px: 1.5, py: 5, display: 'inline-flex'}}>
       {/* <img alt ="Welcome" src="/assets/illustrations/my_logo.png"/> */}
       <Typography variant="h2"  sx={{ color: "#23cfa4" }}>&#123;</Typography>
       <Typography variant="h2"  sx={{ color: "#2065d1" }}>C</Typography>
