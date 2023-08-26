@@ -180,7 +180,7 @@ export default function DashboardAppPage() {
 
         <Grid container spacing={2} alignItems="center" justifyContent="center" borderColor='#fff'>
         
-        <Grid item xs={12} sm={12} md={8} background-color="#FFF">
+        <Grid item xs={12} sm={12} md={9} lg={8} background-color="#FFF">
 {/*       
         <Box>
         <SimpleSlider/>
@@ -218,7 +218,7 @@ export default function DashboardAppPage() {
       
         </Grid>
 
-        <Grid item xs={12} md={4} lg={4}>
+        <Grid item xs={12} sm={12} md={3} lg={4}>
             <AppConversionRates
               title="Conversion Rates"
               subheader="(+43%) than last year"
@@ -335,11 +335,12 @@ export default function DashboardAppPage() {
               ]}
             />
           </Grid>
-
-          {/* <Grid item xs={12} sm={12} md={12} lg={4} >
-          <Stack spacing={2}> */}
-          <Grid item xs={12} sm={6} md={12} lg={12}>
-            <AppNewsUpdate
+          
+          {greaterThanMid ?
+              <Grid item xs={12}  sm={6} md={4} lg={4} >
+              <Stack spacing={2}>
+              <Grid item xs={12} sm={6} md={12} lg={12}>
+              <AppNewsUpdate
               title="Certificates"
               list={certs.map((cert, index) => ({
                 id: faker.datatype.uuid(),
@@ -350,10 +351,9 @@ export default function DashboardAppPage() {
                 // postedAt: faker.date.recent(),
               }))}
             />
-          
-          </Grid>
+            </Grid>
 
-          <Grid item xs={12} sm={6} lg={12}>
+          <Grid item xs={12} sm={6} md={12} lg={12}>
           <AppUpdate
               title="Awards"
               list={awards.slice(0,1).map((cert, index) => ({
@@ -366,9 +366,39 @@ export default function DashboardAppPage() {
             />
            
           </Grid>
-    
-          {/* </Stack>
-          </Grid> */}
+          </Stack>
+          </Grid>
+          :
+          <>
+          <Grid item xs={12} sm={6} md={6} lg={4}>
+          <AppNewsUpdate
+            title="Certificates"
+            list={certs.map((cert, index) => ({
+              id: faker.datatype.uuid(),
+              title: cert.title,
+              description: cert.description,
+              image: cert.image,
+              link: cert.link
+              // postedAt: faker.date.recent(),
+            }))}
+          />
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={6} lg={4}>
+        <AppUpdate
+            title="Awards"
+            list={awards.slice(0,1).map((cert, index) => ({
+              id: faker.datatype.uuid(),
+              title: cert.title,
+              description: cert.description,
+              image: cert.image,
+              // postedAt: faker.date.recent(),
+            }))}
+          />
+         
+        </Grid>              
+        </>
+          }
 
         </Grid>
       </Container>
