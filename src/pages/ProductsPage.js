@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 // @mui
 import { Container, Stack, Typography, Card, CardContent, Button} from '@mui/material';
+import { Link } from 'react-router-dom';
 import Iconify from '../components/iconify';
 // components
 import { ProductSort, ProductList, ProductCartWidget, ProductFilterSidebar } from '../sections/@dashboard/products';
@@ -33,11 +34,11 @@ export default function ProductsPage() {
             Resume
           </Typography>
 
-        <a target="_blank" rel="noreferrer" id="contact" href='https://www.linkedin.com/in/chellsea-carmel-robinson/'>
-          <Button variant="contained" startIcon={<Iconify icon="fluent-mdl2:open-in-new-tab" />}>
+       
+          <Button variant="contained" component={Link} target="_blank" rel="noreferrer" to="https://www.linkedin.com/in/chellsea-carmel-robinson/" startIcon={<Iconify icon="fluent-mdl2:open-in-new-tab" />}>
             View LinkedIn
           </Button>
-        </a>
+  
 
   
         </Stack>

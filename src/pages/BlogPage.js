@@ -4,6 +4,7 @@ import { Grid, Button, Container, Stack, Typography, Card, CardMedia, useMediaQu
 // components
 import { useTheme } from '@mui/material/styles';
 import Iconify from '../components/iconify';
+import { Link } from 'react-router-dom';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
 // mock
 import POSTS from '../_mock/blog';
@@ -75,11 +76,10 @@ export default function BlogPage() {
             Projects
           </Typography>
 
-          <a target="_blank" rel="noreferrer" id="contact" href='https://github.com/chellseacarmel'>
-          <Button variant="contained" startIcon={<Iconify icon="fluent-mdl2:open-in-new-tab" />}>
+          <Button variant="contained" component={Link} target="_blank" rel="noreferrer" to="https://github.com/chellseacarmel" startIcon={<Iconify icon="fluent-mdl2:open-in-new-tab" />}>
             View GitHub
           </Button>
-          </a>
+         
 
         </Stack>
         
