@@ -181,41 +181,12 @@ export default function DashboardAppPage() {
         <Grid container spacing={2} alignItems="center" justifyContent="center" borderColor='#fff'>
         
         <Grid item xs={12} sm={12} md={9} lg={8} background-color="#FFF">
-{/*       
+      
         <Box>
         <SimpleSlider/>
-        </Box> */}
-
-<Grid container spacing={0} alignContent={'center'} wrap="nowrap" >
-        <IconButton aria-label="delete" onClick={handleLeft}  sx={ { borderRadius: 100}}>
-          <img width="30" height="30" src="https://img.icons8.com/stickers/100/back.png"  alt="forward--v1"/>
-        </IconButton>
+        </Box>
 
 
-        <Grid container spacing ={2}>
-         {
-          repos.slice(left,right).map((repo,index)=>(
-            <Grid item xs={12} sm={6} md={6} background-color="#FFF" >
-            <Card xs={12} sm={6} md={6}>
-            {/* <div className="repo-card" width="161px" data-repo={repo.repo_name}/> */}
-            {/* <div>
-            <a target="_blank" rel="noreferrer" href={repo.repo_link}><img  style={{objectFit:'cover'}} alt="Repo cards"src={repo.img_src}/></a>
-            </div> */}
-            <a target="_blank" rel="noreferrer" href={repo.repo_link}>
-            <CardMedia className={styles.media} sx={{ height: 160, width: "100%", objectFit:'contain'}} image={repo.img_src} title="projects"/>
-            </a>
-            </Card>
-            </Grid>
-          ))
-          }
-          </Grid>
-         
-          <IconButton aria-label="delete" onClick={handleRight} sx={ { borderRadius: 100} }>
-          <img width="30" height="30" src="https://img.icons8.com/stickers/100/forward--v1.png" alt="forward--v1"/>
-          </IconButton>
-        </Grid>
-       
-      
         </Grid>
 
         <Grid item xs={12} sm={12} md={3} lg={4}>
