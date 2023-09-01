@@ -43,7 +43,7 @@ export default function SimpleSlider () {
         return(
         <Carousel.Item>
           <Card>
-            <a href={repo.repo_link}>
+            <a  target="_blank" rel="noreferrer" href={repo.repo_link}>
             <img width="100%"  src={repo.img_src} alt="project"/>
             </a>
           </Card>
