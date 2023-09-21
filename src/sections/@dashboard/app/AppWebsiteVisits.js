@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import { renderToString } from 'react-dom/server';
 import ReactApexChart from 'react-apexcharts';
 // @mui
-import { Card, CardHeader, Box } from '@mui/material';
+import { Card, CardHeader, Box, Tooltip,IconButton, Grid, Typography} from '@mui/material';
+import InfoIcon from '@mui/icons-material/Info';
 // components
 import { useChart } from '../../../components/chart';
 
@@ -246,7 +247,16 @@ const seriesData = [{
 
   return (
     <Card {...other}>
-      <CardHeader title={"Career Timeline"}/>
+      <CardHeader title={
+         <Typography variant="h6" sx={{mt:0}}>
+         Career Timeline 
+         <Tooltip title="Hover over the bars to view a more detailed info." placement="right-start" arrow>
+          <IconButton>
+          <InfoIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
+       </Typography>
+      }/>
 
       <Box sx={{ mx: 3 }} dir="ltr">
         <ReactApexChart type="bar" series={seriesData} options={chartOptions} height={380} />
