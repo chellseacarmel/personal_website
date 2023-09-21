@@ -89,8 +89,8 @@ export default function BlogPage() {
                 // <Grid item background-color="#FFF" >
                 // <a href={repo.repo_link}><img alt="Repo cards"src={repo.img_src}/></a>
                 // </Grid>
-            <Grid item xs={12} sm={6} md={4} background-color="#FFF" >
-            <Card xs={12} sm={6} md={4}>
+            <Grid item xs={9} sm={6} md={4} background-color="#FFF" >
+            <Card xs={9} sm={6} md={4}>
             <a target="_blank" rel="noreferrer" href={repo.repo_link}>
             <CardMedia sx={{ height: {height} }} image={repo.img_src} title="projects"/>
             </a>
