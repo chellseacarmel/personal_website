@@ -136,20 +136,20 @@ export default function AppWebsiteVisits({ title, subheader, chartLabels, chartD
 const seriesData = [{
   name: "Undergraduate",
   data: [1,1,0,1,1,0,1,1,0,1,1,0,0,
-    0,0,
+    0,0,0
     ],
   description: "Graduated with honors in a bachelors degree in computer science and applied mathematics and statistics from Stony Brook University"
 },
  {
   name: "Internship",
   data: [0,0,0,0,0,0,0,0,0,0,0,1,0,
-    0,0,
+    0,0,0
     ],
   description: "Interned as a Junior Data Scientist Intern at Akai Kaeru and gained hands on experience in Data Analytics and Machine Learning "
 },
  {name: "Graduate",
   data: [0,0,0,0,0,0,0,0,0,0,0,0,1,
-    1,0,
+    1,0,1
     ],
   description: "Pursuing a graduate degree in computer science at Stony Brook University with a graduation date of December 2023"
 },
@@ -157,21 +157,21 @@ const seriesData = [{
 {
   name: "TAship",
   data: [0,0,0,0,0,0,1,0,0,0,1,0,0,
-    0,0,
+    0,0,0
     ],
   description: "Served as a Teaching Assistant for Multivariable Calculus in Fall 2020 and Differential Equations in Spring 2022"
 },
 {
   name:"Research",
   data: [0,0,0,0,0,0,0,0,0,0,0,0,1,
-    1,1,
+    1,1,0,
     ],
     description: "Served as a Graduate Research Assistant under Prof. I.V Ramakrishnan at Stony Brook University"
 },
 {
   name:"Leadership",
   data: [0,0,0,0,0,0,0,0,0,1,1,0,0,
-    0,0,
+    0,0,0,
     ],
   description: "Served as the Treasurer for the National Society of Leadership and Success "
 
@@ -179,7 +179,7 @@ const seriesData = [{
  {
   name:"Certificates",
   data: [0,0,0,0,0,0,0,0,1,0,0,0,0,
-    0,1,
+    0,1,0
     ],
   description: "Completed online coursework from Coursera and Udemy with certficates from companies such as Google, IBM, etc."
 
@@ -237,7 +237,7 @@ const seriesData = [{
   //   '01/23','02/23','03/23','04/23','05/23','06/23','07/23','08/23','09/23','10/23','11/23','12/23',
   // ]
       categories: ["Fall 2018",'Spring 2019','Summer 2019', 'Fall 2019','Spring 2020','Summer 2020','Fall 2020','Spring 2021','Summer 2021',
-      'Fall 2021','Spring 2022','Summer 2022','Fall 2022','Spring 2023','Summer 2023']
+      'Fall 2021','Spring 2022','Summer 2022','Fall 2022','Spring 2023','Summer 2023','Fall 2023']
     },
     chart: {
       stacked: true,

@@ -225,6 +225,12 @@ const seriesData = [{
         <Grid item>
         <Button variant="outlined" color="info" size="small">Matplotlib</Button>
         </Grid>
+        <Grid item>
+        <Button variant="outlined" color="warning" size="small">TypeScript</Button>
+        </Grid>
+        <Grid item>
+        <Button variant="outlined" color="success" size="small">Git</Button>
+        </Grid>
        
         </Grid>
 

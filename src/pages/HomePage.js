@@ -47,7 +47,7 @@ export default function HomePage() {
           </Typography>
 
           <Typography variant="h3" title sx={{ textAlign: 'center', alignItems: 'center' , color: "#2064d1"}}>
-          A Graduate Student with a Passion for Software and Data.
+          An Engineer on a mission to innovate with Software and Data.
           </Typography>
 
           <br/>

@@ -7,6 +7,11 @@ const repos = [{
   img_src: "https://gh-card.dev/repos/chellseacarmel/Protest-Data-Dashboard.svg"
 },
 {
+  repo_link: "https://github.com/chellseacarmel/The-Notes-Website",
+  img_src: "https://gh-card.dev/repos/chellseacarmel/The-Notes-Website.svg"
+  }
+,
+{
   repo_link: "https://github.com/chellseacarmel/Movie-Data-Dashboard",
   img_src: "https://gh-card.dev/repos/chellseacarmel/Movie-Data-Dashboard.svg"
 },
@@ -32,6 +37,10 @@ repo_link: "https://github.com/chellseacarmel/Flight-Routes-Database",
 img_src: "https://gh-card.dev/repos/chellseacarmel/Flight-Routes-Database.svg"
 }
 ,
+{
+  repo_link: "https://github.com/chellseacarmel/Desserts-Gallore-y",
+  img_src: "https://gh-card.dev/repos/chellseacarmel/Desserts-Gallore-y.svg"
+  }
 ]
 
 

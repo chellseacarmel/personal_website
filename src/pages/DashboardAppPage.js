@@ -158,6 +158,16 @@ export default function DashboardAppPage() {
   title: "Hands On Tableau Training for Data Science",
   link: "https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/Tableau+certificate.pdf"
 },
+{description: "Google",
+  image: "/assets/images/covers/google-logo.png",
+  title: "Google's Generative AI Foundamentals",
+  link: "https://www.cloudskillsboost.google/public_profiles/8d75b95f-5e17-45d6-a53a-1a557b05a29f/badges/7859803?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+},
+{description: "Google",
+  image: "/assets/images/covers/google-logo.png",
+  title: "Google's Introduction to LLM's",
+  link: "https://www.cloudskillsboost.google/public_profiles/8d75b95f-5e17-45d6-a53a-1a557b05a29f/badges/7809309?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+}
 
 ]
   

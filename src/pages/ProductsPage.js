@@ -63,8 +63,8 @@ export default function ProductsPage() {
         
         <Card xs="12">
         <CardContent height="700px">
-        <object data="https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/Chellsea_Robinson_Resume.pdf" type="application/pdf" width="100%" height="700px">
-      <p>Alternative text - include a link <a href="https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/Chellsea_Robinson_Resume.pdf">to the PDF!</a></p>
+        <object data="https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/ChellseaRobinsonResume.pdf" type="application/pdf" width="100%" height="700px">
+      <p>Alternative text - include a link <a href="https://chellwebsitefiles.s3.ap-south-1.amazonaws.com/ChellseaRobinsonResume.pdf">to the PDF!</a></p>
   </object> 
         </CardContent>
         </Card>
